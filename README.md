@@ -69,8 +69,7 @@ http://localhost:8080/expenses/{id} remove this url with according to your serve
           "id": 1,
           "description": "Groceries",
           "amount": 50.0
-      },
-      // Other expenses...
+      }
   ]
   ```
 
