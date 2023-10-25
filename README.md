@@ -1,5 +1,4 @@
 
-```markdown
 ### Project Documentation
 
 #### Expense Tracker System
@@ -47,9 +46,9 @@ The Expense Tracker System is a web application built with Java, Spring Boot, an
 ### 4. Setup
 
 1. Clone the repository:
-   ```bash
+   bash
    git clone https://github.com/prajyotjagtap/Ready_Wealth_Assignment.git
-   ```
+   
 2. Set up your MySQL database and configure `application.properties`.
 3. Open the project in your IDE.
 4. Run the application.
@@ -63,7 +62,7 @@ http://localhost:8080/expenses/{id} remove this url with according to your serve
 - **Endpoint:** `GET http://localhost:8080/expenses`
 - **Description:** Get a list of all expenses.
 - **Example Response:**
-  ```json
+  json
   [
       {
           "id": 1,
@@ -71,60 +70,60 @@ http://localhost:8080/expenses/{id} remove this url with according to your serve
           "amount": 50.0
       }
   ]
-  ```
+  
 
 #### 5.2. Get Expense by ID
 
 - **Endpoint:** `GET http://localhost:8080/expenses/{id}`
 - **Description:** Get details of a specific expense by ID.
 - **Example Response:**
-  ```json
+  json
   {
       "id": 1,
       "description": "Groceries",
       "amount": 50.0
   }
-  ```
+  
 
 #### 5.3. Create Expense
 
 - **Endpoint:** `POST http://localhost:8080/expenses`
 - **Description:** Create a new expense.
 - **Example Request:**
-  ```json
+  json
   {
       "description": "Electronics",
       "amount": 300.0
   }
-  ```
+  
 - **Example Response:**
-  ```json
+  json
   {
       "id": 2,
       "description": "Electronics",
       "amount": 300.0
   }
-  ```
+  
 
 #### 5.4. Update Expense
 
 - **Endpoint:** `PUT http://localhost:8080/expenses/{id}`
 - **Description:** Update an existing expense by ID.
 - **Example Request:**
-  ```json
+  json
   {
       "description": "Monthly Electronics Expenses",
       "amount": 350.0
   }
-  ```
+  
 - **Example Response:**
-  ```json
+  json
   {
       "id": 2,
       "description": "Monthly Electronics Expenses",
       "amount": 350.0
   }
-  ```
+  
 
 #### 5.5. Delete Expense
 
@@ -142,7 +141,6 @@ http://localhost:8080/expenses/{id} remove this url with according to your serve
 
 #### Example Error Handling
 
-```java
 @PutMapping("/{id}")
     public ResponseEntity<String> updateExpense(@PathVariable Long id, @RequestBody Expense updatedExpense) {
         try {
@@ -163,10 +161,4 @@ http://localhost:8080/expenses/{id} remove this url with according to your serve
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Expense not found with ID " + id);
         }
     }
-```
 
-### 8. Contributing
-
-- Fork the repository, make changes, and create a pull request.
-
-```
